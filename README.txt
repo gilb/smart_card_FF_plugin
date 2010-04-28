@@ -1,0 +1,24 @@
+Plugins for install are in the download section : http://github.com/gilb/SmartC/downloads
+
+Compatibilities :
+
+-------
+|Linux|
+-------
+
+Tested on : 
+	*Ubuntu 8.0.4-Hardy Heron
+	*Ubuntu 9.10-the Karmic Koala
+Required : 
+	*Libpcsclite
+	*Firefox 3.5.8 or Firefox 3.6.3(not tested on others versions)
+
+
+---------
+|Windows|
+---------
+
+Works only on Windows XP for the moment(SP1 or later)
+Required :
+	*Winscard(Included by default in the distribution)
+	*Firefox 3.5.8 or Firefox 3.6.3(not tested on others versions)

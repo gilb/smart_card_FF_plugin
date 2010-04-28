@@ -1,0 +1,44 @@
+DEPTH		= ../../..
+topsrcdir	= @top_srcdir@
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
+include $(DEPTH)/config/autoconf.mk
+
+IS_COMPONENT = 1
+MODULE = SmartC
+LIBRARY_NAME =  SmartC
+USE_STATIC_LIBS = 1
+
+XPI_NAME = SmartC
+
+REQUIRES	= xpcom \
+		  string \
+		  $(NULL)
+
+CPPSRCS		= \
+		  SmartC.cpp \
+		  SmartCService.cpp \
+		  $(NULL)
+
+include $(topsrcdir)/config/rules.mk
+
+EXTRA_DSO_LDOPTS += \
+  `pkg-config --libs libpcsclite` \
+  $(XPCOM_GLUE_LDOPTS) \
+  $(NSPR_LIBS) \
+  $(NULL)
+
+CXXFLAGS += `pkg-config --cflags libpcsclite`
+
+# NOTE: If you are coding against the 1.8.0 branch (not 1.8 branch or trunk), the
+# above line won't work, due to linker flag issues. Use the following 
+# variables instead:
+#
+# EXTRA_DSO_LDOPTS += \
+#   $(MOZ_COMPONENT_LIBS) \
+#   $(NULL)
+#
+# Unfortunately, using MOZ_COMPONENT_LIBS links against xpcom_core, which means
+# your components will not work in future versions of Firefox.
+

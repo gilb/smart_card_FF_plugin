@@ -1,0 +1,33 @@
+/*
+* SmartC : Firefox plugin for smart cards.
+* Copyright (C) 2010  Gilles Bernabe.
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "nsISupports.idl"
+#include "nsIServiceManager.idl"
+#include "nsIComponentRegistrar.idl"
+#include "nsIURI.idl"
+
+interface nsIURI;
+interface nsACString;
+interface nsAUTF8String;
+
+[scriptable, uuid(a3f0812b-950a-406b-b76c-6264bccf2f1b)]
+interface ISmartC : nsISupports
+{
+	void SendAPDU(in PRUint32 ct ,[array, size_is(ct)] in PRInt32 valueArray, out unsigned long count, [array, size_is(count), retval] out long retv);
+};
+

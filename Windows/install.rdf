@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+
+    <em:id>SmartC@SmartCAuth.com</em:id>
+    <em:name>SmartC</em:name>
+    <em:version>1.0</em:version>
+    <em:description>Mozilla plugin for smart cards</em:description>
+    <em:creator>Gilles Bernabé</em:creator>  
+    <!-- <em:homepageURL>http://www.SmartCAuth.com.com</em:homepageURL> -->
+    <!-- <em:updateURL>https://www.SmartCAuth.com/update.rdf</em:updateURL>  -->
+    <em:aboutURL></em:aboutURL>    
+
+    <!-- Install in Firefox -->
+    <em:targetApplication>
+      <Description>
+         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+         <em:minVersion>3.0.*</em:minVersion>
+	       <em:maxVersion>3.6.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+  
+</RDF>
+
