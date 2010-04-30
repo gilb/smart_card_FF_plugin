@@ -18,7 +18,7 @@ Required :
 |Windows|
 ---------
 
-Works only on Windows XP for the moment(SP1 or later)
+Works only on Windows XP for the moment
 Required :
 	*Winscard(Included by default in the distribution)
 	*Firefox 3.5.8 or Firefox 3.6.3(not tested on others versions)
