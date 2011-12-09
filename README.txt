@@ -1,4 +1,4 @@
-Plugins for install are in the download section : http://github.com/gilb/SmartC/downloads
+Plugins ready for installation are in the download section
 
 Compatibilities :
 
@@ -20,5 +20,5 @@ Required :
 
 Works only on Windows XP for the moment
 Required :
-	*Winscard(Included by default in the distribution)
-	*Firefox 3.5.8 or Firefox 3.6.3(not tested on others versions)
+	*Winscard(Included by default in the OS)
+	*Firefox 3.5.8 or Firefox 3.6.3(not tested on other versions)
