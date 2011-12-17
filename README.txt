@@ -11,7 +11,7 @@ Tested on :
 	*Ubuntu 9.10-the Karmic Koala
 Required : 
 	*Libpcsclite
-	*Firefox 3.5.8 or Firefox 3.6.3(not tested on others versions)
+	*Firefox 3.5.8 or Firefox 3.6.3(not tested on other versions)
 
 
 ---------
