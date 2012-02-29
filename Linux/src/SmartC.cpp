@@ -1,8 +1,8 @@
 /*
-* SmartC : Firefox plugin for smart cards. 
-* Copyright (C) 2010  Gilles Bernabe.
+* Firefox plugin to interact with smart cards
+* Copyright (C) 2010  Gilles Bernabe
 *
-* Sources: reuse of Ludovic Rousseau example code included in the source of PCSC-Lite.
+* Sources: reuse of Ludovic Rousseau example code included in the source of PCSC-Lite
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
