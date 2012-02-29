@@ -44,23 +44,6 @@ SmartC::~SmartC()
 NS_IMETHODIMP SmartC::SendAPDU(PRUint32 ct, PRInt32 *valueArray, PRUint32* count, PRInt32** retv)
 {	
 	
-	PRUint32 a;
-
-	nsresult rs;
-	nsCAutoString urlServer("https://");
-	//urlServer.Append(ToNewCString(host));
-
-	nsCOMPtr<nsIIOService> newio = 
-	do_GetService("@mozilla.org/network/io-service;1",&rs);
-	//NS_ENSURE_SUCCESS(rs, rs);
-
-	nsCOMPtr<nsIURI> uri ;
-	rs=newio->NewURI(urlServer,nsnull,nsnull,getter_AddRefs(uri));
-	// NS_ENSURE_SUCCESS(rs, rs);
-
-	nsCOMPtr<nsIObserverService> obsSvc = 
-	do_GetService("@mozilla.org/observer-service;1", &rs);
-	
 	int l=0;
 	LONG rv;
 	SCARDCONTEXT hContext;
