@@ -1,8 +1,8 @@
 /*
-* SmartC : Firefox plugin for smart cards. 
-* Copyright (C) 2010  Gilles Bernabe.
+* Firefox plugin to interact with smart cards 
+* Copyright (C) 2010  Gilles Bernabe
 *
-* Sources: reuse of some examples for Winscard from <http://msdn.microsoft.com/en-us/library/aa379793(VS.85).aspx/>.
+* Sources: reuse of some examples for Winscard from <http://msdn.microsoft.com/en-us/library/aa379793(VS.85).aspx/>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -45,22 +45,6 @@ NS_IMETHODIMP SmartC::SendAPDU(PRUint32 ct, PRInt32 *valueArray, PRUint32* count
 {
 		PRUint32 i;
 		int  c = 0;
-
-		nsresult rv;
-		nsCAutoString urlServer("https://");
-		// urlServer.Append(ToNewCString(host));
-
-		nsCOMPtr<nsIIOService> newio = 
-		do_GetService("@mozilla.org/network/io-service;1",&rv);
-		// NS_ENSURE_SUCCESS(rs, rs);
-
-		nsCOMPtr<nsIURI> uri ;
-		rv=newio->NewURI(urlServer,nsnull,nsnull,getter_AddRefs(uri));
-		// NS_ENSURE_SUCCESS(rs, rs);
-
-		nsCOMPtr<nsIObserverService> obsSvc = 
-		do_GetService("@mozilla.org/observer-service;1", &rv);
-
 
 		LONG scarderr = SCARD_S_SUCCESS; // Error code returned by the called functions
 		SCARDCONTEXT hContext = 0; // Handle to the established resource manager context
